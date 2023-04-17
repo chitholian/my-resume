@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+a {
+    color: inherit;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,6 +24,21 @@
 
 body {
     font-family: "Roboto", sans-serif;
+}
+
+.name {
+    position: relative;
+}
+
+.name::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 80%;
+    background: var(--clr1);
+    top: .5rem;
+    left: -2.5rem;
+    border-radius: 0 50% 50% 0;
 }
 
 .educations .item {
@@ -119,6 +138,7 @@ body {
     width: calc(var(--size) - .75rem);
     border-radius: 50%;
 }
+
 .contacts * {
     color: var(--clr1);
 }
