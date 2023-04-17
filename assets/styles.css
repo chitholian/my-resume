@@ -1,0 +1,128 @@
+@import "paper.css";
+@import "roboto/style.css";
+
+:root {
+    font-size: 4mm;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.educations .item {
+    position: relative;
+}
+
+.educations .item:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.educations .item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    height: 100%;
+    width: 2rem;
+    background: var(--clr1);
+}
+
+.experiences .item {
+    position: relative;
+}
+
+.experiences .item:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.experiences .item::before {
+    content: '';
+    position: absolute;
+    top: .35rem;
+    left: -2.5rem;
+    height: 100%;
+    width: 2rem;
+    background: var(--clr1);
+    clip-path: polygon(0 0, 100% 0%, 0% 100%);
+}
+
+.experiences .item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2.5rem;
+    background: var(--logo);
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.skills .items {
+    flex-wrap: wrap;
+}
+
+.skills .items > * {
+    white-space: nowrap;
+    font-size: .7rem;
+    text-align: center;
+    padding: .2rem .3rem;
+    flex: 1;
+    border-radius: .45rem;
+    background: var(--clr1);
+    color: var(--txt1);
+    margin: .15rem;
+}
+
+.interests .items {
+    flex-wrap: wrap;
+}
+
+.interests .items > * {
+    white-space: nowrap;
+    font-size: .7rem;
+    text-align: center;
+    padding: .2rem .3rem;
+    flex: 1;
+    border-radius: .45rem;
+    border: .15rem solid var(--clr1);
+    margin: .15rem;
+}
+
+.avatar {
+    --size: 8rem;
+    border-radius: 50%;
+    display: inline-flex;
+    width: var(--size);
+    height: var(--size);
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid var(--clr1);
+}
+
+.avatar img {
+    height: calc(var(--size) - .75rem);
+    width: calc(var(--size) - .75rem);
+    border-radius: 50%;
+}
+.contacts * {
+    color: var(--clr1);
+}
+
+strong, b {
+    font-weight: bold;
+}
