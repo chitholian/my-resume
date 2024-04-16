@@ -57,6 +57,25 @@ body {
     height: 100%;
     width: 2rem;
     background: var(--clr1);
+    clip-path: polygon(0 50%, 100% 0%, 100% 100%);
+}
+
+.workshops .item {
+    position: relative;
+}
+
+.workshops .item:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.workshops .item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    height: 100%;
+    width: 2rem;
+    background: var(--clr1);
 }
 
 .experiences .item {
@@ -145,4 +164,16 @@ body {
 
 strong, b {
     font-weight: bold;
+}
+
+table.vertical, table.vertical th {
+    text-align: left;
+}
+
+table.vertical th {
+    padding-right: 1rem;
+}
+
+.projects .item {
+    margin: .75rem 0;
 }
