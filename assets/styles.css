@@ -2,6 +2,7 @@
 @import "roboto/style.css";
 
 :root {
+    --bgcolor: var(--clr1);
     font-size: 4mm;
     font-weight: normal;
     font-style: normal;
@@ -110,20 +111,23 @@ body {
     background-repeat: no-repeat;
 }
 
-.skills .items {
-    flex-wrap: wrap;
+.progress-container {
+    margin: 0 .2rem;
+    border: 1px solid var(--bgcolor);
+    border-radius: 5px;
 }
 
-.skills .items > * {
+.progress-bar {
+    width: 0;
+    height: .75rem;
+    background-color: var(--bgcolor);
+    border-radius: 4px 0 0 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+.skills table td {
     white-space: nowrap;
-    font-size: .7rem;
-    text-align: center;
-    padding: .2rem .3rem;
-    flex: 1;
-    border-radius: .45rem;
-    background: var(--clr1);
-    color: var(--txt1);
-    margin: .15rem;
+    font-size: .9rem;
 }
 
 .interests .items {
